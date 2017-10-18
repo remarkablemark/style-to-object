@@ -1,0 +1,14 @@
+{
+  "name": "style-to-object",
+  "version": "0.0.0",
+  "description": "Converts inline style to object.",
+  "author": "Mark <mark@remarkablemark.org>",
+  "keywords": [
+    "inline",
+    "css",
+    "style",
+    "object",
+    "pojo"
+  ],
+  "license": "MIT"
+}
