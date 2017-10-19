@@ -4,6 +4,7 @@
   "description": "Converts inline style to object.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
+    "test": "mocha",
     "lint": "eslint --ignore-path .gitignore ."
   },
   "keywords": [
@@ -14,7 +15,8 @@
     "pojo"
   ],
   "devDependencies": {
-    "eslint": "4.11.0"
+    "eslint": "4.11.0",
+    "mocha": "4.0.1"
   },
   "license": "MIT"
 }
