@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Converts inline style to object.",
   "author": "Mark <mark@remarkablemark.org>",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore ."
+  },
   "keywords": [
     "inline",
     "css",
@@ -10,5 +13,8 @@
     "object",
     "pojo"
   ],
+  "devDependencies": {
+    "eslint": "4.11.0"
+  },
   "license": "MIT"
 }
