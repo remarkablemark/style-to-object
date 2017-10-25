@@ -44,6 +44,35 @@ const invalid = [
   },
 ];
 
+const object = [
+  // single without semicolon
+  {
+    style: 'color: #f00',
+    expected: { color: '#f00' },
+  },
+
+  // multiple with semicolons
+  {
+    style: 'font-size: 42px; font-family: "Open Sans", Helvetica, sans-serif;',
+    expected: {
+      'font-size': '42px',
+      'font-family': '"Open Sans", Helvetica, sans-serif',
+    },
+  },
+
+  // url
+  {
+    style: 'background-image: url("http://cdn.example.com/image.png?v=42");',
+    expected: { 'background-image': 'url("http://cdn.example.com/image.png?v=42")' },
+  },
+];
+
 module.exports = {
+  default: [
+    ...invalid,
+    ...object,
+  ],
+
   invalid,
+  object,
 };

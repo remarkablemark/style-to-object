@@ -5,9 +5,9 @@ const parser = require('../');
 const cases = require('./cases');
 
 describe('parser', () => {
-  cases.invalid.forEach(({ style, expected }) => {
+  cases.default.forEach(({ style, expected }) => {
     describe(`when style=\`${style}\``, () => {
-      it(`returns ${expected}`, () => {
+      it(`returns ${JSON.stringify(expected)}`, () => {
         assert.deepEqual(parser(style), expected);
       });
     });
