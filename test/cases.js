@@ -44,8 +44,7 @@ const invalid = [
   },
 ];
 
-// css module
-const server = [
+const styles = [
   // single without semicolon
   {
     style: 'color: #f00',
@@ -54,7 +53,10 @@ const server = [
 
   // multiple with semicolons
   {
-    style: 'font-size: 42px; font-family: "Open Sans", Helvetica, sans-serif;',
+    style: `
+      font-size: 42px;
+      font-family: "Open Sans", Helvetica, sans-serif;
+    `,
     expected: {
       'font-size': '42px',
       'font-family': '"Open Sans", Helvetica, sans-serif',
@@ -68,38 +70,11 @@ const server = [
   },
 ];
 
-// browser native
-const client = [
-  // single without semicolon
-  {
-    style: 'color: red',
-    expected: { color: 'red' },
-  },
-
-  // browser parser converts hex to rgb
-  {
-    style: 'color: #f00',
-    expected: { color: 'rgb(255, 0, 0)' },
-  },
-
-  // multiple with semicolons
-  {
-    style: 'font-size: 42px; font-family: "Open Sans", Helvetica, sans-serif;',
-    expected: {
-      'font-size': '42px',
-      'font-family': '"Open Sans", Helvetica, sans-serif',
-    },
-  },
-
-  // browser parse strips unnecessary quotes
-  {
-    style: 'background-image: url("http://cdn.example.com/image.png?v=42");',
-    expected: { 'background-image': 'url(http://cdn.example.com/image.png?v=42)' },
-  },
-];
-
 module.exports = {
+  default: [
+    ...invalid,
+    ...styles,
+  ],
   invalid,
-  server,
-  client,
+  styles,
 };
