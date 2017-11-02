@@ -68,6 +68,35 @@ const styles = [
     style: 'background-image: url("http://cdn.example.com/image.png?v=42");',
     expected: { 'background-image': 'url("http://cdn.example.com/image.png?v=42")' },
   },
+
+  // property prefix
+  {
+    style: `
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    `,
+    expected: {
+      '-webkit-hyphens': 'auto',
+      '-moz-hyphens': 'auto',
+      '-ms-hyphens': 'auto',
+      'hyphens': 'auto',
+    },
+  },
+
+  // value prefix
+  {
+    style: `
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    `,
+    expected: {
+      display: 'flex',
+    },
+  },
 ];
 
 module.exports = {
