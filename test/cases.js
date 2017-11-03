@@ -97,6 +97,18 @@ const styles = [
       display: 'flex',
     },
   },
+
+  // missing value
+  {
+    style: 'z-index:',
+    expected: {},
+  },
+
+  // missing property
+  {
+    style: ': 42',
+    expected: Error,
+  },
 ];
 
 module.exports = {

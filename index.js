@@ -16,7 +16,10 @@ module.exports = function parseInlineStyleServer(style) {
   var output = {};
 
   declarations.forEach(function(declaration) {
-    output[declaration.property] = declaration.value;
+    var value = declaration.value;
+    if (value) {
+      output[declaration.property] = value;
+    }
   });
 
   return output;
