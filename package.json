@@ -6,7 +6,11 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "lint": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run build:min && npm run build:unmin",
+    "build:min": "NODE_ENV=production rollup --config --output.file dist/style-to-object.min.js",
+    "build:unmin": "rollup --config --output.file dist/style-to-object.js"
   },
   "keywords": [
     "inline",
@@ -20,7 +24,12 @@
   },
   "devDependencies": {
     "eslint": "4.11.0",
-    "mocha": "4.0.1"
+    "mocha": "4.0.1",
+    "rollup": "0.51.5",
+    "rollup-plugin-commonjs": "8.2.6",
+    "rollup-plugin-node-resolve": "3.0.0",
+    "rollup-plugin-uglify": "2.0.1",
+    "uglify-es": "3.1.9"
   },
   "license": "MIT"
 }
