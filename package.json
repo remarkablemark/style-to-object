@@ -14,6 +14,13 @@
     "build:min": "NODE_ENV=production rollup --config --output.file dist/style-to-object.min.js",
     "build:unmin": "rollup --config --output.file dist/style-to-object.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/style-to-object"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/style-to-object/issues"
+  },
   "keywords": [
     "inline",
     "css",
