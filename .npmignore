@@ -1,0 +1,6 @@
+test
+coverage
+rollup.config.js
+.eslint*
+.travis*
+.npmignore
