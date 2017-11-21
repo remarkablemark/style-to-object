@@ -5,6 +5,7 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "test": "mocha",
     "lint": "eslint --ignore-path .gitignore .",
     "cover": "istanbul cover _mocha -- -R spec \"test/**/*.js\"",
