@@ -101,7 +101,7 @@ const styles = [
   // missing value
   {
     style: 'z-index:',
-    expected: {},
+    expected: null,
   },
 
   // missing property
