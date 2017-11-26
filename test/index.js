@@ -41,5 +41,17 @@ describe('parser', () => {
         );
       });
     });
+
+    it('parses comment', () => {
+      const style = '/* color: #f00; */';
+      parser(style, (name, value, declaration) => {
+        assert.equal(name, undefined);
+        assert.equal(value, undefined);
+        assert.deepEqual(
+          declaration,
+          css.parse(`p{${style}}`).stylesheet.rules[0].declarations[0]
+        );
+      });
+    });
   });
 });
