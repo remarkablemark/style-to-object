@@ -1,9 +1,21 @@
 'use strict';
 
 const invalid = [
-  // empty string
+  // boolean
   {
-    style: '',
+    style: true,
+    expected: null,
+  },
+
+  // null
+  {
+    style: null,
+    expected: null,
+  },
+
+  // undefined
+  {
+    style: undefined,
     expected: null,
   },
 
@@ -13,9 +25,9 @@ const invalid = [
     expected: null,
   },
 
-  // null
+  // string (empty)
   {
-    style: null,
+    style: '',
     expected: null,
   },
 
@@ -37,9 +49,9 @@ const invalid = [
     expected: null,
   },
 
-  // undefined
+  // date
   {
-    style: undefined,
+    style: new Date(),
     expected: null,
   },
 ];
@@ -108,6 +120,18 @@ const styles = [
   {
     style: ': 42',
     expected: Error,
+  },
+
+  // comment
+  {
+    style: '/* color: #f00; */',
+    expected: null,
+  },
+
+  // comment with declaration
+  {
+    style: '/* color: #f00; */ background: blue;',
+    expected: { background: 'blue' },
   },
 ];
 
