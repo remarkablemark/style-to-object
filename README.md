@@ -15,6 +15,8 @@ parser('color: #C0FFEE; background: #BADA55;');
 // { color: "#C0FFEE", background: "#BADA55" }
 ```
 
+[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/)
+
 ## Installation
 
 [NPM](https://www.npmjs.com/package/style-to-object):
@@ -43,6 +45,9 @@ yarn add style-to-object
 Import the module:
 
 ```js
+// CommonJS
+const parser = require('style-to-object');
+
 // ES Modules
 import parser from 'style-to-object';
 ```
@@ -87,11 +92,52 @@ parse(`
 parse('top'); // throws Error
 ```
 
+### Iterator
+
+If the 2nd argument is a function, then the parser will return `null`:
+
+```js
+parser('color: #f00', function() {}); // null
+```
+
+But the function will iterate through each declaration:
+
+```js
+parser('color: #f00', function(name, value, declaration) {
+  console.log(name);        // 'color'
+  console.log(value);       // '#f00'
+  console.log(declaration); // { type: 'declaration', property: 'color', value: '#f00' }
+});
+```
+
+This makes it easy to customize the output:
+
+```js
+const style = `
+  color: #f00;
+  background: #ba4;
+`;
+const output = [];
+const iterator = (name, value) => {
+  output.push([name, value]);
+};
+parser(style, iterator);
+console.log(output); // [['color', '#f00'], ['background', '#ba4']]
+```
+
 ## Testing
 
 ```sh
 $ npm test
 $ npm run lint
+```
+
+## Release
+
+```sh
+$ npm run release
+$ npm publish
+$ git push --follow-tags
 ```
 
 ## Special Thanks
