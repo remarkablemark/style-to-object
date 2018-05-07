@@ -31,7 +31,7 @@
     "pojo"
   ],
   "dependencies": {
-    "css": "2.2.1"
+    "css": "2.2.3"
   },
   "devDependencies": {
     "coveralls": "3.0.0",
