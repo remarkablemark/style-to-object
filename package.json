@@ -1,6 +1,6 @@
 {
   "name": "style-to-object",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Converts inline style to object.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
