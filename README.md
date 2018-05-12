@@ -15,7 +15,7 @@ parser('color: #C0FFEE; background: #BADA55;');
 // { color: "#C0FFEE", background: "#BADA55" }
 ```
 
-[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/)
+[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/) | [repl.it](https://repl.it/@remarkablemark/style-to-object)
 
 ## Installation
 
@@ -143,6 +143,7 @@ $ git push --follow-tags
 ## Special Thanks
 
 - [css](https://github.com/reworkcss/css)
+- [Contributors](https://github.com/remarkablemark/style-to-object/graphs/contributors)
 
 ## License
 
