@@ -31,19 +31,19 @@
     "pojo"
   ],
   "dependencies": {
-    "css": "2.2.3"
+    "css": "2.2.4"
   },
   "devDependencies": {
-    "coveralls": "3.0.0",
-    "eslint": "4.11.0",
+    "coveralls": "3.0.2",
+    "eslint": "5.5.0",
     "istanbul": "0.4.5",
-    "mocha": "4.0.1",
-    "rollup": "0.51.5",
-    "rollup-plugin-commonjs": "8.2.6",
-    "rollup-plugin-node-resolve": "3.0.0",
-    "rollup-plugin-uglify": "2.0.1",
-    "standard-version": "4.2.0",
-    "uglify-es": "3.1.9"
+    "mocha": "5.2.0",
+    "rollup": "0.65.2",
+    "rollup-plugin-commonjs": "9.1.6",
+    "rollup-plugin-node-resolve": "3.4.0",
+    "rollup-plugin-uglify": "5.0.2",
+    "standard-version": "4.4.0",
+    "uglify-es": "3.3.9"
   },
   "license": "MIT"
 }
