@@ -8,7 +8,7 @@ install:
   - npm install
 script:
   - npm run lint
-  - npm run cover
+  - npm run test:coverage
   - npm run build
 after_script:
   - npm run coveralls
