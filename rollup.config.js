@@ -7,12 +7,9 @@ const config = {
   input: 'index.js',
   output: {
     format: 'umd',
-    name: 'StyleToObject',
+    name: 'StyleToObject'
   },
-  plugins: [
-    resolve(),
-    commonjs(),
-  ],
+  plugins: [resolve(), commonjs()]
 };
 
 if (process.env.NODE_ENV === 'production') {

@@ -4,63 +4,63 @@ const invalid = [
   // boolean
   {
     style: true,
-    expected: null,
+    expected: null
   },
 
   // null
   {
     style: null,
-    expected: null,
+    expected: null
   },
 
   // undefined
   {
     style: undefined,
-    expected: null,
+    expected: null
   },
 
   // number
   {
     style: 42,
-    expected: null,
+    expected: null
   },
 
   // string (empty)
   {
     style: '',
-    expected: null,
+    expected: null
   },
 
   // object
   {
     style: {},
-    expected: null,
+    expected: null
   },
 
   // array
   {
     style: ['Array'],
-    expected: null,
+    expected: null
   },
 
   // function
   {
     style: function() {},
-    expected: null,
+    expected: null
   },
 
   // date
   {
     style: new Date(),
-    expected: null,
-  },
+    expected: null
+  }
 ];
 
 const styles = [
   // single without semicolon
   {
     style: 'color: #f00',
-    expected: { color: '#f00' },
+    expected: { color: '#f00' }
   },
 
   // multiple with semicolons
@@ -71,14 +71,16 @@ const styles = [
     `,
     expected: {
       'font-size': '42px',
-      'font-family': '"Open Sans", Helvetica, sans-serif',
-    },
+      'font-family': '"Open Sans", Helvetica, sans-serif'
+    }
   },
 
   // url
   {
     style: 'background-image: url("http://cdn.example.com/image.png?v=42");',
-    expected: { 'background-image': 'url("http://cdn.example.com/image.png?v=42")' },
+    expected: {
+      'background-image': 'url("http://cdn.example.com/image.png?v=42")'
+    }
   },
 
   // property prefix
@@ -93,8 +95,8 @@ const styles = [
       '-webkit-hyphens': 'auto',
       '-moz-hyphens': 'auto',
       '-ms-hyphens': 'auto',
-      'hyphens': 'auto',
-    },
+      hyphens: 'auto'
+    }
   },
 
   // value prefix
@@ -106,40 +108,37 @@ const styles = [
       display: flex;
     `,
     expected: {
-      display: 'flex',
-    },
+      display: 'flex'
+    }
   },
 
   // missing value
   {
     style: 'z-index:',
-    expected: null,
+    expected: null
   },
 
   // missing property
   {
     style: ': 42',
-    expected: Error,
+    expected: Error
   },
 
   // comment
   {
     style: '/* color: #f00; */',
-    expected: null,
+    expected: null
   },
 
   // comment with declaration
   {
     style: '/* color: #f00; */ background: blue;',
-    expected: { background: 'blue' },
-  },
+    expected: { background: 'blue' }
+  }
 ];
 
 module.exports = {
-  default: [
-    ...invalid,
-    ...styles,
-  ],
+  default: [...invalid, ...styles],
   invalid,
-  styles,
+  styles
 };

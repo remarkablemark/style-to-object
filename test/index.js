@@ -3,7 +3,7 @@
 const assert = require('assert');
 const css = require('css');
 const cases = require('./cases');
-const parser = require('../')
+const parser = require('../');
 
 describe('parser', () => {
   cases.default.forEach(({ style, expected }) => {
