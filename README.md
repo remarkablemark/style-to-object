@@ -73,7 +73,10 @@ Output:
 Parse multiple declarations:
 
 ```js
-parse('border-color: #ACE; z-index: 1337;');
+parse(`
+  border-color: #ACE;
+  z-index: 1337;
+`);
 ```
 
 Output:
@@ -94,16 +97,25 @@ Output:
 { 'answer': '42' }
 ```
 
-Invalid declarations:
+Invalid declarations/arguments:
 
 ```js
-parse(1); // null
-parse('top:'); // null
 parse(`
   top: ;
   right: 1em;
 `); // { right: '1em' }
+
+parse();        // null
+parse(null);    // null
+parse(1);       // null
+parse(true);    // null
+parse('top:');  // null
+parse(':12px'); // null
+parse(':');     // null
+parse(';');     // null
+
 parse('top'); // throws Error
+parse('/*');  // throws Error
 ```
 
 ### Iterator
@@ -183,7 +195,7 @@ $ git push --follow-tags && npm publish
 
 ## Special Thanks
 
-- [css](https://github.com/reworkcss/css)
+- [inline-style-parser](https://github.com/remarkablemark/inline-style-parser)
 - [Contributors](https://github.com/remarkablemark/style-to-object/graphs/contributors)
 
 ## License

@@ -1,5 +1,5 @@
 const assert = require('assert');
-const css = require('css');
+const inlineStyleParser = require('inline-style-parser');
 const { cases, errors, invalids } = require('./data');
 const parse = require('..');
 
@@ -48,10 +48,7 @@ describe('iterator', () => {
     parse(style, (name, value, declaration) => {
       assert.equal(name, 'color');
       assert.equal(value, '#f00');
-      assert.deepEqual(
-        declaration,
-        css.parse(`p{${style}}`).stylesheet.rules[0].declarations[0]
-      );
+      assert.deepEqual(declaration, inlineStyleParser(style)[0]);
     });
   });
 
@@ -60,10 +57,7 @@ describe('iterator', () => {
     parse(style, (name, value, declaration) => {
       assert.equal(name, undefined);
       assert.equal(value, undefined);
-      assert.deepEqual(
-        declaration,
-        css.parse(`p{${style}}`).stylesheet.rules[0].declarations[0]
-      );
+      assert.deepEqual(declaration, inlineStyleParser(style)[0]);
     });
   });
 });

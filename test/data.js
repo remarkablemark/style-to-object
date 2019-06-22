@@ -120,11 +120,12 @@ const cases = [
 ];
 
 const errors = [
-  // missing property
-  ':42',
+  // property missing ':'
+  'overflow',
+  '1',
 
-  // missing end of comment
-  '/*'
+  // end of comment missing
+  '/* unclosed comment'
 ];
 
 const invalids = [
@@ -142,6 +143,9 @@ const invalids = [
 
   // missing value
   'z-index:',
+  ':',
+  ':100px',
+  ';',
 
   // comment
   '/* color: #f00; */',
