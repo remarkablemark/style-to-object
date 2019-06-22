@@ -1,18 +1,4 @@
-const invalid = [
-  [undefined, null],
-  [null, null],
-  [true, null],
-  [false, null],
-  [0, null],
-  [1, null],
-  ['', null],
-  [{}, null],
-  [['Array'], null],
-  [() => Function, null],
-  [new Date(), null]
-];
-
-const styles = [
+const cases = [
   // single without semicolon
   ['color: #f00', { color: '#f00' }],
 
@@ -55,9 +41,6 @@ const styles = [
   // missing value
   ['z-index:', null],
 
-  // missing property
-  [': 42', Error],
-
   // comment
   ['/* color: #f00; */', null],
 
@@ -65,8 +48,30 @@ const styles = [
   ['/* color: #f00; */ background: blue;', { background: 'blue' }]
 ];
 
+const errors = [
+  // missing property
+  ':42',
+
+  // missing end of comment
+  '/*'
+];
+
+const invalids = [
+  undefined,
+  null,
+  true,
+  false,
+  0,
+  1,
+  '',
+  {},
+  ['Array'],
+  () => Function,
+  new Date()
+];
+
 module.exports = {
-  default: [...invalid, ...styles],
-  invalid,
-  styles
+  cases,
+  errors,
+  invalids
 };

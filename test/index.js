@@ -1,24 +1,36 @@
 const assert = require('assert');
 const css = require('css');
-const data = require('./data');
+const { cases, errors, invalids } = require('./data');
 const parse = require('..');
 
 describe('parser', () => {
-  data.default.forEach(cases => {
-    const [style, expected] = cases;
+  cases.forEach(data => {
+    const [style, expected] = data;
 
     // error case
     describe(`when style=\`${style}\``, () => {
-      if (expected === Error) {
-        it('throws error', () => {
-          assert.throws(() => parse(style), Error);
-        });
-        return;
-      }
-
-      // normal case
-      it(`returns ${JSON.stringify(expected)}`, () => {
+      it(`returns \`${JSON.stringify(expected)}\``, () => {
         assert.deepEqual(parse(style), expected);
+      });
+    });
+  });
+});
+
+describe('error', () => {
+  errors.forEach(style => {
+    describe(`when style=\`${style}\``, () => {
+      it('throws error', () => {
+        assert.throws(() => parse(style), Error);
+      });
+    });
+  });
+});
+
+describe('invalid', () => {
+  invalids.forEach(style => {
+    describe(`when style=\`${style}\``, () => {
+      it('returns null', () => {
+        assert.equal(parse(style), null);
       });
     });
   });
