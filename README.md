@@ -6,29 +6,35 @@
 [![Build Status](https://travis-ci.org/remarkablemark/style-to-object.svg?branch=master)](https://travis-ci.org/remarkablemark/style-to-object)
 [![Coverage Status](https://coveralls.io/repos/github/remarkablemark/style-to-object/badge.svg?branch=master)](https://coveralls.io/github/remarkablemark/style-to-object?branch=master)
 [![Dependency status](https://david-dm.org/remarkablemark/style-to-object.svg)](https://david-dm.org/remarkablemark/style-to-object)
+[![NPM downloads](https://img.shields.io/npm/dm/style-to-object.svg?style=flat-square)](https://www.npmjs.com/package/style-to-object)
 
 Parses inline style to object:
 
 ```js
 var parser = require('style-to-object');
 parser('color: #C0FFEE; background: #BADA55;');
-// { color: "#C0FFEE", background: "#BADA55" }
 ```
 
-[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/) | [repl.it](https://repl.it/@remarkablemark/style-to-object)
+Output:
+
+```js
+{ color: '#C0FFEE', background: '#BADA55' }
+```
+
+[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/) | [Repl.it](https://repl.it/@remarkablemark/style-to-object) | [Examples](https://github.com/remarkablemark/style-to-object/tree/master/examples)
 
 ## Installation
 
 [NPM](https://www.npmjs.com/package/style-to-object):
 
 ```sh
-npm install style-to-object --save
+$ npm install style-to-object --save
 ```
 
 [Yarn](https://yarn.fyi/style-to-object):
 
 ```sh
-yarn add style-to-object
+$ yarn add style-to-object
 ```
 
 [CDN](https://unpkg.com/style-to-object/):
@@ -36,7 +42,7 @@ yarn add style-to-object
 ```html
 <script src="https://unpkg.com/style-to-object@latest/dist/style-to-object.min.js"></script>
 <script>
-  var parser = window.StyleToObject;
+  window.StyleToObject(/* string */);
 </script>
 ```
 
@@ -46,38 +52,46 @@ Import the module:
 
 ```js
 // CommonJS
-const parser = require('style-to-object');
+const parse = require('style-to-object');
 
 // ES Modules
-import parser from 'style-to-object';
+import parse from 'style-to-object';
 ```
 
 Parse single declaration:
 
 ```js
-parse(`
-  color: #f00
-`);
-// { color: '#f00' }
+parse('line-height: 42');
+```
+
+Output:
+
+```js
+{ 'line-height': '42' }
 ```
 
 Parse multiple declarations:
 
 ```js
-parse(`
-  color: #f00;
-  z-index: 42;
-`);
-// { color: '#f00', 'z-index': '42' }
+parse('border-color: #ACE; z-index: 1337;');
+```
+
+Output:
+
+```js
+{ 'border-color': '#ACE', 'z-index': '1337' }
 ```
 
 Parse unknown declarations:
 
 ```js
-parse(`
-  foo: bar;
-`);
-// { foo: 'bar' }
+parse('answer: 42;');
+```
+
+Output:
+
+```js
+{ 'answer': '42' }
 ```
 
 Invalid declarations:
@@ -97,7 +111,7 @@ parse('top'); // throws Error
 If the 2nd argument is a function, then the parser will return `null`:
 
 ```js
-parser('color: #f00', function() {}); // null
+parse('color: #f00', function() {}); // null
 ```
 
 But the function will iterate through each declaration:
@@ -114,15 +128,15 @@ This makes it easy to customize the output:
 
 ```js
 const style = `
-  color: #f00;
-  background: #ba4;
+  color: red;
+  background: blue;
 `;
 const output = [];
-const iterator = (name, value) => {
+function iterator(name, value) {
   output.push([name, value]);
-};
-parser(style, iterator);
-console.log(output); // [['color', '#f00'], ['background', '#ba4']]
+}
+parse(style, iterator);
+console.log(output); // [['color', 'red'], ['background', 'blue']]
 ```
 
 ## Testing
