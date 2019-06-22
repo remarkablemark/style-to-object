@@ -9,12 +9,13 @@
     "release": "standard-version",
     "test": "mocha",
     "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
     "cover": "istanbul cover _mocha -- -R spec \"test/**/*.js\"",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "clean": "rm -rf dist",
     "build": "npm run clean && npm run build:min && npm run build:unmin",
-    "build:min": "NODE_ENV=production rollup --config --output.file dist/style-to-object.min.js",
-    "build:unmin": "rollup --config --output.file dist/style-to-object.js"
+    "build:min": "NODE_ENV=production rollup --config --file dist/style-to-object.min.js",
+    "build:unmin": "NODE_ENV=development rollup --config --file dist/style-to-object.js"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,11 @@
     "url": "https://github.com/remarkablemark/style-to-object/issues"
   },
   "keywords": [
+    "style-to-object",
     "inline",
-    "css",
     "style",
+    "parser",
+    "css",
     "object",
     "pojo"
   ],
