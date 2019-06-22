@@ -1,10 +1,10 @@
 const assert = require('assert');
 const css = require('css');
-const cases = require('./cases');
-const parse = require('../');
+const data = require('./data');
+const parse = require('..');
 
 describe('parser', () => {
-  cases.default.forEach(({ style, expected }) => {
+  data.default.forEach(({ style, expected }) => {
     // error case
     describe(`when style=\`${style}\``, () => {
       if (expected === Error) {
