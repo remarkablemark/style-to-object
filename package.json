@@ -37,6 +37,8 @@
     "css": "2.2.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
     "coveralls": "^3.0.2",
     "eslint": "^5.5.0",
     "husky": "^2.4.1",
