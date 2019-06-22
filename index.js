@@ -1,4 +1,4 @@
-var parse = require('css/lib/parse');
+var parse = require('inline-style-parser');
 
 /**
  * Parses inline style to object.
@@ -17,12 +17,9 @@ function StyleToObject(style, iterator) {
     return output;
   }
 
-  var hasIterator = typeof iterator === 'function';
-
-  // wrap declarations in a placeholder
-  var declarations = parse('a{' + style + '}').stylesheet.rules[0].declarations;
-
   var declaration;
+  var declarations = parse(style);
+  var hasIterator = typeof iterator === 'function';
   var property;
   var value;
 
