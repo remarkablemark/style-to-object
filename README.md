@@ -141,17 +141,44 @@ console.log(output); // [['color', 'red'], ['background', 'blue']]
 
 ## Testing
 
+Run tests:
+
 ```sh
 $ npm test
+```
+
+Run tests in watch mode:
+
+```sh
+$ npm run test:watch
+```
+
+Run tests with coverage:
+
+```sh
+$ npm run test:coverage
+# npm run test:coverage:report
+```
+
+Lint files:
+
+```sh
 $ npm run lint
+```
+
+Fix lint errors:
+
+```sh
+$ npm run lint:fix
 ```
 
 ## Release
 
+Only collaborators with credentials can release and publish:
+
 ```sh
 $ npm run release
-$ npm publish
-$ git push --follow-tags
+$ git push --follow-tags && npm publish
 ```
 
 ## Special Thanks
