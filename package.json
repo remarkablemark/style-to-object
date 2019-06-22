@@ -39,6 +39,7 @@
   "devDependencies": {
     "coveralls": "^3.0.2",
     "eslint": "^5.5.0",
+    "husky": "^2.4.1",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "rollup": "^0.65.2",
