@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && npm run build:min && npm run build:unmin",
-    "build:min": "NODE_ENV=production rollup --config --file dist/style-to-object.min.js",
+    "build:min": "NODE_ENV=production rollup --config --file dist/style-to-object.min.js --sourcemap",
     "build:unmin": "NODE_ENV=development rollup --config --file dist/style-to-object.js",
     "clean": "rm -rf dist",
     "coveralls": "cat coverage/lcov.info | coveralls",
