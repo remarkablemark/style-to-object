@@ -1,23 +1,30 @@
 var parse = require('css/lib/parse');
 
 /**
- * Parses inline style.
+ * Parses inline style to object.
  *
- * Example: 'color:red' => { color: 'red' }
+ * @example
+ * // returns { 'line-height': '42' }
+ * StyleToObject('line-height: 42;');
  *
  * @param  {String}      style      - The inline style.
  * @param  {Function}    [iterator] - The iterator function.
  * @return {null|Object}
  */
-module.exports = function parseInlineStyle(style, iterator) {
-  if (!style || typeof style !== 'string') return null;
-
-  // make sure to wrap declarations in placeholder
-  var declarations = parse('p{' + style + '}').stylesheet.rules[0].declarations;
-  var declaration, property, value;
-
+function StyleToObject(style, iterator) {
   var output = null;
+  if (!style || typeof style !== 'string') {
+    return output;
+  }
+
   var hasIterator = typeof iterator === 'function';
+
+  // wrap declarations in a placeholder
+  var declarations = parse('a{' + style + '}').stylesheet.rules[0].declarations;
+
+  var declaration;
+  var property;
+  var value;
 
   for (var i = 0, len = declarations.length; i < len; i++) {
     declaration = declarations[i];
@@ -33,4 +40,6 @@ module.exports = function parseInlineStyle(style, iterator) {
   }
 
   return output;
-};
+}
+
+module.exports = StyleToObject;
