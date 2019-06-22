@@ -1,13 +1,19 @@
 <textarea cols="50" rows="5">color: #C0FFEE;
 background: #BADA55;</textarea>
 <pre><code></code></pre>
-<script src="../dist/style-to-object.js"></script>
+<script src="../dist/style-to-object.min.js"></script>
 <script>
   var code = document.querySelector('code');
   var textarea = document.querySelector('textarea');
-  function onInput(event) {
-    code.innerText = JSON.stringify(StyleToObject(event.target.value), null, 2);
+
+  function renderOutput(event) {
+    code.innerText = JSON.stringify(
+      window.StyleToObject(event.target.value),
+      null,
+      2
+    );
   }
-  onInput({ target: textarea });
-  textarea.addEventListener('input', onInput);
+
+  textarea.addEventListener('input', renderOutput);
+  renderOutput({ target: textarea });
 </script>
