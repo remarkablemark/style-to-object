@@ -1,16 +1,18 @@
 language: node_js
 node_js:
   - stable
-cache:
-  directories:
-    - node_modules
 install:
   - npm install
 script:
+  # Lint last commit message from history
+  - npx commitlint --from=HEAD~1
   - npm run lint
   - npm run test:coverage
   - npm run build
 after_script:
   - npm run coveralls
+cache:
+  directories:
+    - node_modules
 notifications:
   email: false
