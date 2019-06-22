@@ -1,138 +1,68 @@
 const invalid = [
-  // boolean
-  {
-    style: true,
-    expected: null
-  },
-
-  // null
-  {
-    style: null,
-    expected: null
-  },
-
-  // undefined
-  {
-    style: undefined,
-    expected: null
-  },
-
-  // number
-  {
-    style: 42,
-    expected: null
-  },
-
-  // string (empty)
-  {
-    style: '',
-    expected: null
-  },
-
-  // object
-  {
-    style: {},
-    expected: null
-  },
-
-  // array
-  {
-    style: ['Array'],
-    expected: null
-  },
-
-  // function
-  {
-    style: function() {},
-    expected: null
-  },
-
-  // date
-  {
-    style: new Date(),
-    expected: null
-  }
+  [undefined, null],
+  [null, null],
+  [true, null],
+  [false, null],
+  [0, null],
+  [1, null],
+  ['', null],
+  [{}, null],
+  [['Array'], null],
+  [() => Function, null],
+  [new Date(), null]
 ];
 
 const styles = [
   // single without semicolon
-  {
-    style: 'color: #f00',
-    expected: { color: '#f00' }
-  },
+  ['color: #f00', { color: '#f00' }],
 
   // multiple with semicolons
-  {
-    style: `
-      font-size: 42px;
-      font-family: "Open Sans", Helvetica, sans-serif;
-    `,
-    expected: {
+  [
+    'font-size: 42px; font-family: "Open Sans", Helvetica, sans-serif;',
+    {
       'font-size': '42px',
       'font-family': '"Open Sans", Helvetica, sans-serif'
     }
-  },
+  ],
 
   // url
-  {
-    style: 'background-image: url("http://cdn.example.com/image.png?v=42");',
-    expected: {
+  [
+    'background-image: url("http://cdn.example.com/image.png?v=42");',
+    {
       'background-image': 'url("http://cdn.example.com/image.png?v=42")'
     }
-  },
+  ],
 
   // property prefix
-  {
-    style: `
-      -webkit-hyphens: auto;
-      -moz-hyphens: auto;
-      -ms-hyphens: auto;
-      hyphens: auto;
-    `,
-    expected: {
+  [
+    '-webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;',
+    {
       '-webkit-hyphens': 'auto',
       '-moz-hyphens': 'auto',
       '-ms-hyphens': 'auto',
       hyphens: 'auto'
     }
-  },
+  ],
 
   // value prefix
-  {
-    style: `
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-    `,
-    expected: {
+  [
+    'display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex;',
+    {
       display: 'flex'
     }
-  },
+  ],
 
   // missing value
-  {
-    style: 'z-index:',
-    expected: null
-  },
+  ['z-index:', null],
 
   // missing property
-  {
-    style: ': 42',
-    expected: Error
-  },
+  [': 42', Error],
 
   // comment
-  {
-    style: '/* color: #f00; */',
-    expected: null
-  },
+  ['/* color: #f00; */', null],
 
   // comment with declaration
-  {
-    style: '/* color: #f00; */ background: blue;',
-    expected: { background: 'blue' }
-  }
+  ['/* color: #f00; */ background: blue;', { background: 'blue' }]
 ];
 
 module.exports = {

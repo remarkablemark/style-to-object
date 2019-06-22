@@ -4,7 +4,9 @@ const data = require('./data');
 const parse = require('..');
 
 describe('parser', () => {
-  data.default.forEach(({ style, expected }) => {
+  data.default.forEach(cases => {
+    const [style, expected] = cases;
+
     // error case
     describe(`when style=\`${style}\``, () => {
       if (expected === Error) {
