@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
-    "module": "umd",
+    "module": "commonjs",
     "lib": ["es6"],
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "noEmit": true
-  }
+    "baseUrl": ".",
+    "noEmit": true,
+    "paths": {
+      "style-to-object": ["."]
+    }
+  },
+  "files": ["index.d.ts", "test/index.test.ts"]
 }
