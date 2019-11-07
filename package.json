@@ -4,6 +4,7 @@
   "description": "Converts inline style to object.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "npm run clean && npm run build:min && npm run build:unmin",
     "build:min": "NODE_ENV=production rollup --config --file dist/style-to-object.min.js --sourcemap",
@@ -12,6 +13,7 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
+    "lint:dts": "dtslint .",
     "prepublishOnly": "npm run build",
     "release": "standard-version --no-verify",
     "test": "mocha",
@@ -42,6 +44,7 @@
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
     "coveralls": "^3.0.4",
+    "dtslint": "^1.0.3",
     "eslint": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.4.1",
@@ -56,7 +59,8 @@
     "standard-version": "^6.0.1"
   },
   "files": [
-    "/dist"
+    "/dist",
+    "index.d.ts"
   ],
   "license": "MIT"
 }
