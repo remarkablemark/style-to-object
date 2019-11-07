@@ -11,8 +11,8 @@
 Parses inline style to object:
 
 ```js
-var parser = require('style-to-object');
-parser('color: #C0FFEE; background: #BADA55;');
+var parse = require('style-to-object');
+parse('color: #C0FFEE; background: #BADA55;');
 ```
 
 Output:
@@ -129,7 +129,7 @@ parse('color: #f00', function() {}); // null
 But the function will iterate through each declaration:
 
 ```js
-parser('color: #f00', function(name, value, declaration) {
+parse('color: #f00', function(name, value, declaration) {
   console.log(name);        // 'color'
   console.log(value);       // '#f00'
   console.log(declaration); // { type: 'declaration', property: 'color', value: '#f00' }
@@ -144,9 +144,11 @@ const style = `
   background: blue;
 `;
 const output = [];
+
 function iterator(name, value) {
   output.push([name, value]);
 }
+
 parse(style, iterator);
 console.log(output); // [['color', 'red'], ['background', 'blue']]
 ```
@@ -169,7 +171,9 @@ Run tests with coverage:
 
 ```sh
 $ npm run test:coverage
-# npm run test:coverage:report
+
+# generate html report
+$ npm run test:coverage:report
 ```
 
 Lint files:
@@ -182,6 +186,12 @@ Fix lint errors:
 
 ```sh
 $ npm run lint:fix
+```
+
+Test TypeScript declaration file for style and correctness:
+
+```sh
+$ npm run lint:dts
 ```
 
 ## Release
