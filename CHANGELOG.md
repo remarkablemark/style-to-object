@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/remarkablemark/style-to-object/compare/v0.2.3...v0.3.0) (2019-11-07)
+
+
+### Bug Fixes
+
+* **index:** update return type of main function (remove `any`) ([c6e8a54](https://github.com/remarkablemark/style-to-object/commit/c6e8a54))
+
+
+### Features
+
+* add typescript support ([74a1b83](https://github.com/remarkablemark/style-to-object/commit/74a1b83))
+
+
+### Tests
+
+* **index:** add test for TS declaration file ([b029a4b](https://github.com/remarkablemark/style-to-object/commit/b029a4b))
+
+
+
 ### [0.2.3](https://github.com/remarkablemark/style-to-object/compare/v0.2.2...v0.2.3) (2019-06-22)
 
 
