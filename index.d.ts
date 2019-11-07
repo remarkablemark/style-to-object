@@ -7,10 +7,10 @@
  *
  */
 
-declare var StyleToObject: (
+declare function StyleToObject(
   style: string,
   iterator?: StyleToObject.Iterator
-) => { [name: string]: any } | null;
+): { [name: string]: any } | null;
 export = StyleToObject;
 
 declare namespace StyleToObject {
