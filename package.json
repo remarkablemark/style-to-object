@@ -5,6 +5,7 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
   "types": "index.d.ts",
+  "module": "index.mjs",
   "exports": {
     ".": {
       "import": "./index.mjs",
