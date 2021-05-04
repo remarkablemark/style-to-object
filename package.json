@@ -5,6 +5,14 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
   "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./package.json": "./package.json",
+    "./": "./"
+  },
   "scripts": {
     "build": "run-s build:*",
     "build:min": "NODE_ENV=production rollup --config --file dist/style-to-object.min.js --sourcemap",
@@ -61,7 +69,8 @@
   },
   "files": [
     "/dist",
-    "index.d.ts"
+    "index.d.ts",
+    "index.mjs"
   ],
   "license": "MIT"
 }
