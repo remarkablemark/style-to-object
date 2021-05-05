@@ -1,3 +1,3 @@
-import mod from './index.js';
+import StyleToObject from './index.js';
 
-export const StyleToObject = mod;
+export default StyleToObject;
