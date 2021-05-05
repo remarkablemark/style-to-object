@@ -3,7 +3,7 @@
 [![NPM](https://nodei.co/npm/style-to-object.png)](https://nodei.co/npm/style-to-object/)
 
 [![NPM version](https://img.shields.io/npm/v/style-to-object.svg)](https://www.npmjs.com/package/style-to-object)
-[![Build Status](https://travis-ci.org/remarkablemark/style-to-object.svg?branch=master)](https://travis-ci.org/remarkablemark/style-to-object)
+[![build](https://github.com/remarkablemark/style-to-object/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/style-to-object/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/github/remarkablemark/style-to-object/badge.svg?branch=master)](https://coveralls.io/github/remarkablemark/style-to-object?branch=master)
 [![Dependency status](https://david-dm.org/remarkablemark/style-to-object.svg)](https://david-dm.org/remarkablemark/style-to-object)
 [![NPM downloads](https://img.shields.io/npm/dm/style-to-object.svg?style=flat-square)](https://www.npmjs.com/package/style-to-object)
@@ -99,6 +99,8 @@ Output:
 
 Invalid declarations/arguments:
 
+<!-- prettier-ignore-start -->
+
 ```js
 parse(`
   top: ;
@@ -118,6 +120,8 @@ parse('top'); // throws Error
 parse('/*');  // throws Error
 ```
 
+<!-- prettier-ignore-end -->
+
 ### Iterator
 
 If the 2nd argument is a function, then the parser will return `null`:
@@ -128,6 +132,8 @@ parse('color: #f00', function() {}); // null
 
 But the function will iterate through each declaration:
 
+<!-- prettier-ignore-start -->
+
 ```js
 parse('color: #f00', function(name, value, declaration) {
   console.log(name);        // 'color'
@@ -135,6 +141,8 @@ parse('color: #f00', function(name, value, declaration) {
   console.log(declaration); // { type: 'declaration', property: 'color', value: '#f00' }
 });
 ```
+
+<!-- prettier-ignore-end -->
 
 This makes it easy to customize the output:
 
@@ -171,9 +179,6 @@ Run tests with coverage:
 
 ```sh
 $ npm run test:coverage
-
-# generate html report
-$ npm run test:coverage:report
 ```
 
 Lint files:
