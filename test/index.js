@@ -4,7 +4,7 @@ const { cases, errors, invalids } = require('./data');
 const parse = require('..');
 
 describe('parser', () => {
-  cases.forEach(data => {
+  cases.forEach((data) => {
     const [style, expected] = data;
 
     // error case
@@ -17,7 +17,7 @@ describe('parser', () => {
 });
 
 describe('error', () => {
-  errors.forEach(style => {
+  errors.forEach((style) => {
     describe(`when style=\`${style}\``, () => {
       it('throws error', () => {
         assert.throws(() => parse(style), Error);
@@ -27,7 +27,7 @@ describe('error', () => {
 });
 
 describe('invalid', () => {
-  invalids.forEach(style => {
+  invalids.forEach((style) => {
     describe(`when style=\`${style}\``, () => {
       it('returns null', () => {
         assert.equal(parse(style), null);
