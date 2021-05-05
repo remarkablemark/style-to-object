@@ -54,7 +54,8 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.4",
-    "standard-version": "^6"
+    "standard-version": "^6",
+    "typescript": "^4.2.4"
   },
   "files": [
     "/dist",
