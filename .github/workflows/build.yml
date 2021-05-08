@@ -1,0 +1,44 @@
+name: build
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        node-version: [14]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint commit message
+        run: npx commitlint --from=HEAD~1
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Lint TypeScript
+        run: npm run lint:dts
+
+      - name: Run unit tests
+        run: npm run test:coverage
+
+      - name: Build bundle
+        run: npm run build
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
