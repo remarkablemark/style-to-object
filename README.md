@@ -28,13 +28,13 @@ Output:
 [NPM](https://www.npmjs.com/package/style-to-object):
 
 ```sh
-$ npm install style-to-object --save
+npm install style-to-object --save
 ```
 
 [Yarn](https://yarn.fyi/style-to-object):
 
 ```sh
-$ yarn add style-to-object
+yarn add style-to-object
 ```
 
 [CDN](https://unpkg.com/style-to-object/):
@@ -166,37 +166,37 @@ console.log(output); // [['color', 'red'], ['background', 'blue']]
 Run tests:
 
 ```sh
-$ npm test
+npm test
 ```
 
 Run tests in watch mode:
 
 ```sh
-$ npm run test:watch
+npm run test:watch
 ```
 
 Run tests with coverage:
 
 ```sh
-$ npm run test:coverage
+npm run test:coverage
 ```
 
 Lint files:
 
 ```sh
-$ npm run lint
+npm run lint
 ```
 
 Fix lint errors:
 
 ```sh
-$ npm run lint:fix
+npm run lint:fix
 ```
 
 Test TypeScript declaration file for style and correctness:
 
 ```sh
-$ npm run lint:dts
+npm run lint:dts
 ```
 
 ## Release
@@ -204,8 +204,8 @@ $ npm run lint:dts
 Only collaborators with credentials can release and publish:
 
 ```sh
-$ npm run release
-$ git push --follow-tags && npm publish
+npm run release
+git push --follow-tags && npm publish
 ```
 
 ## Special Thanks
