@@ -127,7 +127,7 @@ parse('/*');  // throws Error
 If the 2nd argument is a function, then the parser will return `null`:
 
 ```js
-parse('color: #f00', function() {}); // null
+parse('color: #f00', function () {}); // null
 ```
 
 But the function will iterate through each declaration:
