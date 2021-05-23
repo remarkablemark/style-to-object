@@ -1,0 +1,40 @@
+name: release-please
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Release Please
+        uses: GoogleCloudPlatform/release-please-action@v2
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+          package-name: style-to-object
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Install dependencies
+        run: npm ci
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Publish package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
