@@ -5,7 +5,6 @@
 [![NPM version](https://img.shields.io/npm/v/style-to-object.svg)](https://www.npmjs.com/package/style-to-object)
 [![build](https://github.com/remarkablemark/style-to-object/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/style-to-object/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/github/remarkablemark/style-to-object/badge.svg?branch=master)](https://coveralls.io/github/remarkablemark/style-to-object?branch=master)
-[![Dependency status](https://david-dm.org/remarkablemark/style-to-object.svg)](https://david-dm.org/remarkablemark/style-to-object)
 [![NPM downloads](https://img.shields.io/npm/dm/style-to-object.svg?style=flat-square)](https://www.npmjs.com/package/style-to-object)
 
 Parses inline style to object:
