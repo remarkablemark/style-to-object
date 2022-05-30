@@ -1,6 +1,6 @@
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
-import { uglify } from 'rollup-plugin-uglify';
+import { terser } from 'rollup-plugin-terser';
 
 const config = {
   input: 'index.js',
@@ -12,7 +12,7 @@ const config = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(uglify());
+  config.plugins.push(terser());
 }
 
 export default config;
