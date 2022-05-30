@@ -20,7 +20,7 @@ Output:
 { color: '#C0FFEE', background: '#BADA55' }
 ```
 
-[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/) | [Repl.it](https://repl.it/@remarkablemark/style-to-object) | [Examples](https://github.com/remarkablemark/style-to-object/tree/master/examples)
+[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/) | [Replit](https://replit.com/@remarkablemark/style-to-object) | [Examples](https://github.com/remarkablemark/style-to-object/tree/master/examples)
 
 ## Installation
 
