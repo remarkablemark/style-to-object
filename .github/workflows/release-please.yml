@@ -7,34 +7,34 @@ on:
 jobs:
   release-please:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
 
     steps:
       - name: Release Please
-        uses: GoogleCloudPlatform/release-please-action@v2
-        id: release
+        uses: google-github-actions/release-please-action@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
-          package-name: style-to-object
+        id: release
 
+  publish:
+    needs: release-please
+    runs-on: ubuntu-latest
+    if: ${{ needs.release-please.outputs.release_created }}
+
+    steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-        if: ${{ steps.release.outputs.release_created }}
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
           registry-url: https://registry.npmjs.org
-        if: ${{ steps.release.outputs.release_created }}
 
       - name: Install dependencies
-        run: npm ci
-        if: ${{ steps.release.outputs.release_created }}
+        run: npm install
 
-      - name: Publish package
+      - name: Publish
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ steps.release.outputs.release_created }}
