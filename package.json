@@ -43,7 +43,7 @@
     "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
     "@rollup/plugin-commonjs": "^22.0.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-node-resolve": "^14.0.0",
     "dtslint": "^4.2.1",
     "eslint": "^8.16.0",
     "eslint-plugin-prettier": "^4.0.0",
