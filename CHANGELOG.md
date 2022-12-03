@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/remarkablemark/style-to-object/compare/v0.3.0...v0.4.0) (2022-12-03)
+
+
+### Features
+
+* add ESM support ([2e7d959](https://github.com/remarkablemark/style-to-object/commit/2e7d959f4ced37c40de82a1c7a4fbb2f299f04cd))
+
 ## [0.3.0](https://github.com/remarkablemark/style-to-object/compare/v0.2.3...v0.3.0) (2019-11-07)
 
 
