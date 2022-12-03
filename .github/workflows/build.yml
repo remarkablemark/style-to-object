@@ -26,6 +26,9 @@ jobs:
       - name: Run unit tests
         run: npm run test:coverage
 
+      - name: Run ES modules tests
+        run: npm run test:module
+
       - name: Build bundle
         run: npm run build
 
