@@ -52,7 +52,7 @@
     "@rollup/plugin-node-resolve": "15.0.1",
     "@rollup/plugin-terser": "0.2.0",
     "dtslint": "4.2.1",
-    "eslint": "8.29.0",
+    "eslint": "8.30.0",
     "eslint-plugin-prettier": "4.2.1",
     "husky": "8.0.2",
     "lint-staged": "13.1.0",
