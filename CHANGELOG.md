@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.1](https://github.com/remarkablemark/style-to-object/compare/v0.4.0...v0.4.1) (2023-01-16)
+
+
+### Bug Fixes
+
+* include types in export ([3026691](https://github.com/remarkablemark/style-to-object/commit/3026691e090a6763f3b03d13a9251952d15b2e7a))
+
 ## [0.4.0](https://github.com/remarkablemark/style-to-object/compare/v0.3.0...v0.4.0) (2022-12-03)
 
 
