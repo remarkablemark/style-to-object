@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.2](https://github.com/remarkablemark/style-to-object/compare/v0.4.1...v0.4.2) (2023-08-02)
+
+
+### Bug Fixes
+
+* do not throw error when loading library as UMD script ([24bb01d](https://github.com/remarkablemark/style-to-object/commit/24bb01df3b81f22ebe7ae6760cb7954d4a936c7d))
+
 ## [0.4.1](https://github.com/remarkablemark/style-to-object/compare/v0.4.0...v0.4.1) (2023-01-16)
 
 
