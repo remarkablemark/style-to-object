@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.3](https://github.com/remarkablemark/style-to-object/compare/v0.4.2...v0.4.3) (2023-10-14)
+
+
+### Build System
+
+* **rollup:** generate sourcemap for UMD build ([463e4b5](https://github.com/remarkablemark/style-to-object/commit/463e4b59ea8249df831977b4008a973e1f5d3cfe))
+
 ## [0.4.2](https://github.com/remarkablemark/style-to-object/compare/v0.4.1...v0.4.2) (2023-08-02)
 
 
