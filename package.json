@@ -12,9 +12,7 @@
     "require": "./index.js"
   },
   "scripts": {
-    "build": "run-s build:*",
-    "build:min": "NODE_ENV=production rollup --config --file dist/style-to-object.min.js --sourcemap",
-    "build:unmin": "NODE_ENV=development rollup --config --file dist/style-to-object.js",
+    "build": "rollup --config --failAfterWarnings",
     "clean": "rm -rf dist",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
