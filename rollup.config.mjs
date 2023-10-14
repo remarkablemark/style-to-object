@@ -2,17 +2,20 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 
-const config = {
+/**
+ * Build rollup config for development or production.
+ */
+const getConfig = (minify = false) => ({
   input: 'index.js',
   output: {
+    file: `dist/style-to-object${minify ? '.min' : ''}.js`,
     format: 'umd',
-    name: 'StyleToObject'
+    name: 'StyleToObject',
+    sourcemap: true
   },
-  plugins: [commonjs(), resolve()]
-};
+  plugins: [commonjs(), resolve(), minify && terser()]
+});
 
-if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(terser());
-}
+const configs = [getConfig(), getConfig(true)];
 
-export default config;
+export default configs;
