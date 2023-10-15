@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/remarkablemark/style-to-object/compare/v0.4.4...v1.0.0) (2023-10-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Iterator excludes `Comment` and CommonJS requires the `default` key.
+
+### Code Refactoring
+
+* migrate to TypeScript ([6cf1d92](https://github.com/remarkablemark/style-to-object/commit/6cf1d92650d7669244b423d3ae9d345fd563f855))
+
 ## [0.4.4](https://github.com/remarkablemark/style-to-object/compare/v0.4.3...v0.4.4) (2023-10-15)
 
 
