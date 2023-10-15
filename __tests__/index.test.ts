@@ -1,6 +1,6 @@
-const inlineStyleParser = require('inline-style-parser');
-const { cases, errors, invalids } = require('./fixtures');
-const parse = require('..');
+import inlineStyleParser from 'inline-style-parser';
+import { cases, errors, invalids } from './fixtures';
+import parse from '../src';
 
 describe('valid cases', () => {
   describe.each(cases)('when style=%p', (style, expected) => {
@@ -23,7 +23,7 @@ describe('error cases', () => {
 describe('invalid cases', () => {
   describe.each(invalids)('when style=%p', (style) => {
     it('returns null', () => {
-      expect(parse(style)).toBe(null);
+      expect(parse(style as string)).toBe(null);
     });
   });
 });
@@ -48,7 +48,6 @@ describe('iterator', () => {
     parse(style, (name, value, comment) => {
       expect(name).toBe(undefined);
       expect(value).toBe(undefined);
-      expect(comment.comment).toBe(' color: #f00; ');
       expect(comment).toEqual(inlineStyleParser(style)[0]);
     });
   });

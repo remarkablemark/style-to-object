@@ -1,5 +1,5 @@
 import assert from 'assert';
-import StyleToObject from '../index.mjs';
+import parse from '../esm/index.mjs';
 
-assert.strictEqual(typeof StyleToObject, 'function');
-assert.deepEqual(StyleToObject('foo: bar'), { foo: 'bar' });
+assert.strictEqual(typeof parse, 'function');
+assert.deepEqual(parse('foo: bar'), { foo: 'bar' });

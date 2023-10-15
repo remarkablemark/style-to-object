@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
+    "target": "es5",
     "module": "commonjs",
-    "lib": ["es6"],
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "baseUrl": ".",
-    "noEmit": true,
-    "paths": {
-      "style-to-object": ["."]
-    }
-  }
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  },
+  "include": ["src"]
 }
