@@ -11,7 +11,8 @@
 Parses inline style to object:
 
 ```js
-var parse = require('style-to-object');
+import parse from 'style-to-object';
+
 parse('color: #C0FFEE; background: #BADA55;');
 ```
 
@@ -48,14 +49,16 @@ yarn add style-to-object
 
 ## Usage
 
-Import the module:
+Import with ES Modules:
 
 ```js
-// CommonJS
-const parse = require('style-to-object');
-
-// ES Modules
 import parse from 'style-to-object';
+```
+
+Require with CommonJS:
+
+```js
+const parse = require('style-to-object').default;
 ```
 
 Parse single declaration:
@@ -127,7 +130,7 @@ parse('/*');  // throws Error
 If the 2nd argument is a function, then the parser will return `null`:
 
 ```js
-parse('color: #f00', function() {}); // null
+parse('color: #f00', () => {}); // null
 ```
 
 But the function will iterate through each declaration:
@@ -135,7 +138,7 @@ But the function will iterate through each declaration:
 <!-- prettier-ignore-start -->
 
 ```js
-parse('color: #f00', function(name, value, declaration) {
+parse('color: #f00', (name, value, declaration) => {
   console.log(name);        // 'color'
   console.log(value);       // '#f00'
   console.log(declaration); // { type: 'declaration', property: 'color', value: '#f00' }
@@ -161,42 +164,14 @@ parse(style, iterator);
 console.log(output); // [['color', 'red'], ['background', 'blue']]
 ```
 
-## Testing
+## Migration
 
-Run tests:
+### v1
 
-```sh
-npm test
-```
+Migrated to TypeScript. Iterator excludes `Comment`. CommonJS requires the `.default` key:
 
-Run tests in watch mode:
-
-```sh
-npm run test:watch
-```
-
-Run tests with coverage:
-
-```sh
-npm run test:coverage
-```
-
-Lint files:
-
-```sh
-npm run lint
-```
-
-Fix lint errors:
-
-```sh
-npm run lint:fix
-```
-
-Test TypeScript declaration file for style and correctness:
-
-```sh
-npm run lint:dts
+```js
+const parse = require('style-to-object').default;
 ```
 
 ## Release
