@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.4](https://github.com/remarkablemark/style-to-object/compare/v0.4.3...v0.4.4) (2023-10-15)
+
+
+### Bug Fixes
+
+* **index:** export default function and add `Comment` to index.d.ts ([07d7c98](https://github.com/remarkablemark/style-to-object/commit/07d7c9825d1c111f1083aaadf9fd4891eb7b1f7a))
+
 ## [0.4.3](https://github.com/remarkablemark/style-to-object/compare/v0.4.2...v0.4.3) (2023-10-14)
 
 
