@@ -30,6 +30,7 @@ describe('invalid cases', () => {
 
 describe('iterator', () => {
   it('returns null', () => {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     expect(parse('color: #foo;', () => {})).toBe(null);
   });
 
