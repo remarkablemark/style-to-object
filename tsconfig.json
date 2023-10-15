@@ -11,6 +11,5 @@
     "paths": {
       "style-to-object": ["."]
     }
-  },
-  "files": ["index.d.ts", "test/index.test.ts"]
+  }
 }

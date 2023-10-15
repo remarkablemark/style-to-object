@@ -60,10 +60,10 @@ const cases = [
   ['content: "Lorem ipsum";', { content: '"Lorem ipsum"' }],
   ['content: "foo: bar;";', { content: '"foo: bar;"' }],
   [
-    ('background-image: url("http://cdn.example.com/image.png?v=42");',
+    'background-image: url("http://cdn.example.com/image.png?v=42");',
     {
       'background-image': 'url("http://cdn.example.com/image.png?v=42")'
-    })
+    }
   ],
   [
     'background: #123456 url("https://foo.bar/image.png?v=2")',
@@ -74,13 +74,13 @@ const cases = [
 
   // property prefix
   [
-    ('-webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;',
+    '-webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;',
     {
       '-webkit-hyphens': 'auto',
       '-moz-hyphens': 'auto',
       '-ms-hyphens': 'auto',
       hyphens: 'auto'
-    })
+    }
   ],
 
   // value prefix
