@@ -6,6 +6,7 @@
   "main": "cjs/index.js",
   "module": "esm/index.mjs",
   "exports": {
+    "types": "./cjs/index.d.ts",
     "import": "./esm/index.mjs",
     "require": "./cjs/index.js"
   },
