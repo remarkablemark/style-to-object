@@ -70,7 +70,8 @@
   "files": [
     "/cjs",
     "/dist",
-    "/esm"
+    "/esm",
+    "/src"
   ],
   "license": "MIT"
 }
