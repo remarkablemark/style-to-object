@@ -1,3 +1,4 @@
 import StyleToObject from '../cjs/index.js';
 
-export default StyleToObject.default;
+// ensure compatibility with rollup umd build
+export default StyleToObject.default || StyleToObject;
