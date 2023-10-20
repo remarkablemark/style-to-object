@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.3](https://github.com/remarkablemark/style-to-object/compare/v1.0.2...v1.0.3) (2023-10-20)
+
+
+### Bug Fixes
+
+* **esm:** ensure index.mjs is compatible with rollup umd build ([40b92c3](https://github.com/remarkablemark/style-to-object/commit/40b92c3e8d13eab96b65f8aa2a656e8bc9a94a15))
+
 ## [1.0.2](https://github.com/remarkablemark/style-to-object/compare/v1.0.1...v1.0.2) (2023-10-19)
 
 
