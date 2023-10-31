@@ -3,8 +3,9 @@
   "version": "1.0.3",
   "description": "Converts inline style to object.",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "cjs/index.js",
-  "module": "esm/index.mjs",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.mjs",
+  "types": "./cjs/index.d.ts",
   "exports": {
     "types": "./cjs/index.d.ts",
     "import": "./esm/index.mjs",
