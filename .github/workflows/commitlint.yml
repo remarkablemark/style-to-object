@@ -11,7 +11,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --prefer-offline
 
       - name: Lint commit message
         run: npx commitlint --from=HEAD~1
