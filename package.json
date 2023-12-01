@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "run-s build:*",
-    "build:cjs": "tsc --outDir cjs",
+    "build:cjs": "tsc",
     "build:umd": "rollup --config --failAfterWarnings",
     "clean": "rm -rf cjs coverage dist",
     "lint": "eslint --ignore-path .gitignore .",
