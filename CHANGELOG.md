@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.5](https://github.com/remarkablemark/style-to-object/compare/v1.0.4...v1.0.5) (2023-12-01)
+
+
+### Bug Fixes
+
+* **esm:** fix ESM types by adding index.d.mts ([73ae1d4](https://github.com/remarkablemark/style-to-object/commit/73ae1d41d97eb4db0983fd06d3b6ea2ef436ea65)), closes [#205](https://github.com/remarkablemark/style-to-object/issues/205)
+
 ## [1.0.4](https://github.com/remarkablemark/style-to-object/compare/v1.0.3...v1.0.4) (2023-10-31)
 
 
