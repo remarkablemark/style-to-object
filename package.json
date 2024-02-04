@@ -1,7 +1,7 @@
 {
   "name": "style-to-object",
   "version": "1.0.5",
-  "description": "Converts inline style to object.",
+  "description": "Parse CSS inline style to JavaScript object.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "./cjs/index.js",
   "module": "./esm/index.mjs",

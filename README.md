@@ -8,7 +8,7 @@
 [![codecov](https://codecov.io/gh/remarkablemark/style-to-object/branch/master/graph/badge.svg?token=XWxph9dpa4)](https://codecov.io/gh/remarkablemark/style-to-object)
 [![NPM downloads](https://badgen.net/npm/dm/style-to-object)](https://www.npmjs.com/package/style-to-object)
 
-Parses inline style to object:
+Parse CSS inline style to JavaScript object:
 
 ```js
 import parse from 'style-to-object';
