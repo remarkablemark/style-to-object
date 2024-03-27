@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.6](https://github.com/remarkablemark/style-to-object/compare/v1.0.5...v1.0.6) (2024-03-27)
+
+
+### Build System
+
+* **deps:** bump inline-style-parser from 0.2.2 to 0.2.3 ([#301](https://github.com/remarkablemark/style-to-object/issues/301)) ([22af20c](https://github.com/remarkablemark/style-to-object/commit/22af20ceb8f82e24b374d08d28c3af204b59b81e))
+
 ## [1.0.5](https://github.com/remarkablemark/style-to-object/compare/v1.0.4...v1.0.5) (2023-12-01)
 
 
