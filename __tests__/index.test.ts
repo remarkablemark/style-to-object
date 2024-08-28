@@ -1,6 +1,7 @@
 import inlineStyleParser from 'inline-style-parser';
-import { cases, errors, invalids } from './fixtures';
+
 import parse from '../src';
+import { cases, errors, invalids } from './fixtures';
 
 describe('valid cases', () => {
   describe.each(cases)('when style=%p', (style, expected) => {

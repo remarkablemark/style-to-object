@@ -1,5 +1,5 @@
-import parse from 'inline-style-parser';
 import type { Declaration } from 'inline-style-parser';
+import parse from 'inline-style-parser';
 
 export { Declaration };
 

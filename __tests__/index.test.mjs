@@ -1,4 +1,5 @@
 import assert from 'assert';
+
 import parse from '../esm/index.mjs';
 
 assert.strictEqual(typeof parse, 'function');
