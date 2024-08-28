@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.7](https://github.com/remarkablemark/style-to-object/compare/v1.0.6...v1.0.7) (2024-08-28)
+
+
+### Continuous Integration
+
+* **github:** publish package to npm registry with provenance ([496fc11](https://github.com/remarkablemark/style-to-object/commit/496fc11f70d57d457cebb0d0fbb9eab881871e8d))
+
 ## [1.0.6](https://github.com/remarkablemark/style-to-object/compare/v1.0.5...v1.0.6) (2024-03-27)
 
 
