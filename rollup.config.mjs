@@ -5,12 +5,14 @@ import typescript from '@rollup/plugin-typescript';
 
 const getConfig = (minify = false) => ({
   input: 'src/index.ts',
+
   output: {
     file: `dist/style-to-object${minify ? '.min' : ''}.js`,
     format: 'umd',
     name: 'StyleToObject',
     sourcemap: true,
   },
+
   plugins: [
     commonjs(),
     resolve(),
@@ -18,6 +20,9 @@ const getConfig = (minify = false) => ({
       declaration: false,
       declarationMap: false,
       module: 'esnext',
+      compilerOptions: {
+        outDir: 'dist',
+      },
     }),
     minify && terser(),
   ],
