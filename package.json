@@ -58,7 +58,7 @@
     "@types/node": "22.15.18",
     "@typescript-eslint/eslint-plugin": "8.32.1",
     "@typescript-eslint/parser": "8.32.1",
-    "eslint": "9.26.0",
+    "eslint": "9.27.0",
     "eslint-plugin-prettier": "5.4.0",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "globals": "16.1.0",
