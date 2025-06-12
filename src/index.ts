@@ -3,7 +3,7 @@ import parse from 'inline-style-parser';
 
 export { Declaration };
 
-interface StyleObject {
+export interface StyleObject {
   [name: string]: string;
 }
 
