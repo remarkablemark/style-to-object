@@ -22,7 +22,7 @@
     "prepublishOnly": "run-s lint lint:tsc test clean build",
     "test": "jest",
     "test:ci": "CI=true jest --ci --colors --coverage",
-    "test:esm": "npm run build:cjs && node --test __tests__",
+    "test:esm": "npm run build:cjs && node --test",
     "test:watch": "npm run test -- --watch"
   },
   "repository": {
