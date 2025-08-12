@@ -10,8 +10,13 @@ const config: Config = {
       statements: 100,
     },
   },
-  preset: 'ts-jest',
+  moduleFileExtensions: ['js', 'ts'],
   modulePathIgnorePatterns: ['fixtures', 'types'],
+  preset: 'ts-jest',
+  reporters:
+    process.env.CI === 'true'
+      ? [['github-actions', { silent: false }], 'summary']
+      : undefined,
   testEnvironment: 'node',
 };
 
