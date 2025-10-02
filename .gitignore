@@ -43,7 +43,7 @@ jspm_packages
 # Build files
 cjs/
 dist/
-esm/index.d.mts
+esm/
 
 # Vim swap files
 *.swp

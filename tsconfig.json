@@ -1,14 +1,8 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "outDir": "cjs"
-  },
-  "include": ["src"]
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "outDir": "esm"
+  }
 }
