@@ -3,7 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 import typescript from '@rollup/plugin-typescript';
 
-const getConfig = (minify = false) => ({
+const getUMDConfig = (minify = false) => ({
   input: 'src/index.ts',
 
   output: {
@@ -28,6 +28,30 @@ const getConfig = (minify = false) => ({
   ],
 });
 
-const configs = [getConfig(), getConfig(true)];
+const getESMConfig = () => ({
+  input: 'src/index.ts',
+
+  output: {
+    file: 'esm/index.mjs',
+    format: 'es',
+    sourcemap: true,
+  },
+
+  plugins: [
+    resolve(),
+    typescript({
+      declaration: false,
+      declarationMap: false,
+      module: 'esnext',
+      compilerOptions: {
+        outDir: 'esm',
+      },
+    }),
+  ],
+
+  external: ['inline-style-parser'],
+});
+
+const configs = [getUMDConfig(), getUMDConfig(true), getESMConfig()];
 
 export default configs;

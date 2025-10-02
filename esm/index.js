@@ -1,5 +1,4 @@
 import parse from 'inline-style-parser';
-
 /**
  * Parses inline style to object.
  *
@@ -14,7 +13,7 @@ import parse from 'inline-style-parser';
  * parse('line-height: 42;'); // { 'line-height': '42' }
  * ```
  */
-function StyleToObject(style, iterator) {
+export default function StyleToObject(style, iterator) {
   let styleObject = null;
   if (!style || typeof style !== 'string') {
     return styleObject;
@@ -35,6 +34,4 @@ function StyleToObject(style, iterator) {
   });
   return styleObject;
 }
-
-export { StyleToObject as default };
-//# sourceMappingURL=index.mjs.map
+//# sourceMappingURL=index.js.map
