@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.10](https://github.com/remarkablemark/style-to-object/compare/v1.0.9...v1.0.10) (2025-10-02)
+
+### Bug Fixes
+
+- remove esm build dir ([79df2e8](https://github.com/remarkablemark/style-to-object/commit/79df2e80346d57668dae6d95626ad6b8fa501178))
+- switch to true esm build ([8e7b7ed](https://github.com/remarkablemark/style-to-object/commit/8e7b7edad01aa46c6b83d8308da5e9fffd143e20))
+
+### Miscellaneous Chores
+
+- export StyleObject interface ([45e8343](https://github.com/remarkablemark/style-to-object/commit/45e834300a2f75eb165f2f8100d6c356fa2c7b2a))
+
 ## [1.0.9](https://github.com/remarkablemark/style-to-object/compare/v1.0.8...v1.0.9) (2025-06-06)
 
 ### Miscellaneous Chores
