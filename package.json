@@ -5,10 +5,10 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "./cjs/index.js",
   "module": "./esm/index.mjs",
-  "types": "./esm/index.d.mts",
+  "types": "./esm/index.d.ts",
   "exports": {
     "import": {
-      "types": "./esm/index.d.mts",
+      "types": "./esm/index.d.ts",
       "default": "./esm/index.mjs"
     },
     "require": {
@@ -24,6 +24,7 @@
     "clean": "rm -rf cjs coverage dist esm",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
+    "lint:package": "publint",
     "lint:tsc": "tsc --noEmit",
     "prepare": "husky",
     "prepublishOnly": "run-s lint lint:tsc test clean build",
