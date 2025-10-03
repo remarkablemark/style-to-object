@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.11](https://github.com/remarkablemark/style-to-object/compare/v1.0.10...v1.0.11) (2025-10-03)
+
+
+### Bug Fixes
+
+* **package:** fix esm types ([#769](https://github.com/remarkablemark/style-to-object/issues/769)) ([cf23bb7](https://github.com/remarkablemark/style-to-object/commit/cf23bb7a8b21e7ec6eda6dfb1aedfddd6ad372c5))
+
 ## [1.0.10](https://github.com/remarkablemark/style-to-object/compare/v1.0.9...v1.0.10) (2025-10-02)
 
 ### Bug Fixes
