@@ -1,6 +1,6 @@
 {
   "name": "style-to-object",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Parse CSS inline style to JavaScript object.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "./cjs/index.js",

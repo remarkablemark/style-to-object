@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.13](https://github.com/remarkablemark/style-to-object/compare/v1.0.12...v1.0.13) (2025-11-16)
+
+
+### Documentation
+
+* **readme:** replace badgen.net with shields.io status badges ([34d0947](https://github.com/remarkablemark/style-to-object/commit/34d094715c2a3df1c5cb26ad129e436d4986097b))
+
 ## [1.0.12](https://github.com/remarkablemark/style-to-object/compare/v1.0.11...v1.0.12) (2025-10-24)
 
 
