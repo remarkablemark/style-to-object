@@ -2,11 +2,11 @@
 
 [![NPM](https://nodei.co/npm/style-to-object.png)](https://nodei.co/npm/style-to-object/)
 
-[![NPM version](https://badgen.net/npm/v/style-to-object)](https://www.npmjs.com/package/style-to-object)
-[![Bundlephobia minified + gzip](https://badgen.net/bundlephobia/minzip/style-to-object)](https://bundlephobia.com/package/style-to-object)
+[![NPM version](https://img.shields.io/npm/v/style-to-object)](https://www.npmjs.com/package/style-to-object)
+[![NPM bundle size](https://img.shields.io/bundlephobia/minzip/style-to-object)](https://bundlephobia.com/package/style-to-object)
 [![build](https://github.com/remarkablemark/style-to-object/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/style-to-object/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/remarkablemark/style-to-object/branch/master/graph/badge.svg?token=XWxph9dpa4)](https://codecov.io/gh/remarkablemark/style-to-object)
-[![NPM downloads](https://badgen.net/npm/dm/style-to-object)](https://www.npmjs.com/package/style-to-object)
+[![NPM downloads](https://img.shields.io/npm/dm/style-to-object)](https://www.npmjs.com/package/style-to-object)
 
 Parse CSS inline style to JavaScript object:
 
@@ -22,7 +22,7 @@ Output:
 { color: '#C0FFEE', background: '#BADA55' }
 ```
 
-[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/) | [Replit](https://replit.com/@remarkablemark/style-to-object) | [Examples](https://github.com/remarkablemark/style-to-object/tree/master/examples)
+[JSFiddle](https://jsfiddle.net/remarkablemark/ykz2meot/) | [Examples](https://github.com/remarkablemark/style-to-object/tree/master/examples)
 
 ## Installation
 
