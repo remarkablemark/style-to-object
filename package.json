@@ -50,7 +50,7 @@
     "pojo"
   ],
   "dependencies": {
-    "inline-style-parser": "0.2.6"
+    "inline-style-parser": "0.2.7"
   },
   "devDependencies": {
     "@commitlint/cli": "20.1.0",
