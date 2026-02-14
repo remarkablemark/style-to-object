@@ -1,6 +1,6 @@
 # style-to-object
 
-[![NPM](https://nodei.co/npm/style-to-object.png)](https://b.remarkabl.org/style-to-object)
+[![NPM](https://nodei.co/npm/style-to-object.svg)](https://b.remarkabl.org/style-to-object)
 
 [![NPM version](https://img.shields.io/npm/v/style-to-object)](https://www.npmjs.com/package/style-to-object)
 [![NPM bundle size](https://img.shields.io/bundlephobia/minzip/style-to-object)](https://bundlephobia.com/package/style-to-object)
