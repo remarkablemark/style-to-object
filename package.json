@@ -53,8 +53,8 @@
     "inline-style-parser": "0.2.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "20.5.3",
-    "@commitlint/config-conventional": "20.5.3",
+    "@commitlint/cli": "21.0.0",
+    "@commitlint/config-conventional": "21.0.0",
     "@eslint/compat": "2.0.2",
     "@eslint/eslintrc": "3.3.3",
     "@eslint/js": "9.39.2",
