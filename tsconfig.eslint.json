@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowJs": true
+  },
+  "include": [
+    "eslint.config.mts",
+    "jest.config.ts",
+    "rollup.config.mjs",
+    "src",
+    "__tests__"
+  ],
+  "exclude": ["node_modules"]
+}

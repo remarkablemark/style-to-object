@@ -3,9 +3,7 @@ import parse from 'inline-style-parser';
 
 export { Declaration };
 
-export interface StyleObject {
-  [name: string]: string;
-}
+export type StyleObject = Record<string, string>;
 
 type Iterator = (
   property: string,
@@ -50,7 +48,7 @@ export default function StyleToObject(
     if (hasIterator) {
       iterator(property, value, declaration);
     } else if (value) {
-      styleObject = styleObject || {};
+      styleObject = styleObject ?? {};
       styleObject[property] = value;
     }
   });
