@@ -31,7 +31,7 @@ describe('invalid cases', () => {
 
 describe('iterator', () => {
   it('returns null', () => {
-    expect(parse('color: #foo;', () => {})).toBe(null);
+    expect(parse('color: #foo;', () => undefined)).toBe(null);
   });
 
   it('invokes callback with arguments=[name, value, declaration]', () => {
