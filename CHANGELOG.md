@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/remarkablemark/style-to-object/compare/v1.0.14...v2.0.0) (2026-06-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tsconfig:** change build target from `es5` to `es6`
+
+### Build System
+
+* **tsconfig:** change target from es5 to es6 ([67b656f](https://github.com/remarkablemark/style-to-object/commit/67b656f08bb747c0f87e37bf4ce7edf7660f9624))
+
 ## [1.0.14](https://github.com/remarkablemark/style-to-object/compare/v1.0.13...v1.0.14) (2025-11-16)
 
 
