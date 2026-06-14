@@ -1,24 +1,38 @@
-import { defineConfig } from 'tsdown';
+import { defineConfig, type UserConfig } from 'tsdown';
+
+const entry = 'src/index.ts';
+const sourcemap = true;
+const external = ['inline-style-parser'];
+
+const baseConfig = {
+  entry,
+  sourcemap,
+  external,
+} satisfies UserConfig;
+
+const umdBase = {
+  ...baseConfig,
+  format: 'umd' as const,
+  outDir: 'dist',
+  globalName: 'StyleToObject',
+  noExternal: external,
+};
 
 export default defineConfig([
   // ESM build
   {
-    entry: 'src/index.ts',
+    ...baseConfig,
     format: 'esm',
     outDir: 'esm',
     dts: true,
-    sourcemap: true,
-    external: ['inline-style-parser'],
   },
 
   // CJS build
   {
-    entry: 'src/index.ts',
+    ...baseConfig,
     format: 'cjs',
     outDir: 'cjs',
     dts: true,
-    sourcemap: true,
-    external: ['inline-style-parser'],
     outExtensions() {
       return {
         js: '.js',
@@ -29,12 +43,7 @@ export default defineConfig([
 
   // UMD build (unminified)
   {
-    entry: 'src/index.ts',
-    format: 'umd',
-    outDir: 'dist',
-    globalName: 'StyleToObject',
-    sourcemap: true,
-    noExternal: ['inline-style-parser'],
+    ...umdBase,
     outputOptions: {
       entryFileNames: 'style-to-object.js',
     },
@@ -42,13 +51,8 @@ export default defineConfig([
 
   // UMD build (minified)
   {
-    entry: 'src/index.ts',
-    format: 'umd',
-    outDir: 'dist',
-    globalName: 'StyleToObject',
-    sourcemap: true,
+    ...umdBase,
     minify: true,
-    noExternal: ['inline-style-parser'],
     outputOptions: {
       entryFileNames: 'style-to-object.min.js',
     },
