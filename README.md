@@ -166,6 +166,10 @@ console.log(output); // [['color', 'red'], ['background', 'blue']]
 
 ## Migration
 
+### v2
+
+Changed build target from `es5` to `es6`.
+
 ### v1
 
 Migrated to TypeScript. Iterator excludes `Comment`. CommonJS requires the `.default` key:
