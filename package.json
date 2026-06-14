@@ -24,7 +24,7 @@
     "lint:package": "publint",
     "lint:tsc": "tsc --noEmit",
     "prepare": "husky",
-    "prepublishOnly": "run-s lint lint:tsc test clean build",
+    "prepublishOnly": "run-s clean build lint lint:tsc test",
     "test": "jest",
     "test:ci": "CI=true jest --ci --colors --coverage",
     "test:esm": "npm run build && node --test **/*.test.mjs",
