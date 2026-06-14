@@ -9,12 +9,6 @@ export default defineConfig([
     dts: true,
     sourcemap: true,
     external: ['inline-style-parser'],
-    outExtensions() {
-      return {
-        js: '.mjs',
-        dts: '.ts',
-      };
-    },
   },
 
   // CJS build
