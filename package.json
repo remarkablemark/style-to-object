@@ -22,7 +22,7 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "lint:package": "publint",
-    "lint:tsc": "tsc --noEmit",
+    "lint:tsc": "tsc --project tsconfig.test.json",
     "prepare": "husky",
     "prepublishOnly": "run-s clean build lint lint:tsc test",
     "test": "jest",

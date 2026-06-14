@@ -1,4 +1,3 @@
-import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import js from '@eslint/js';
@@ -8,9 +7,8 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const gitignorePath = path.resolve(__dirname, '.gitignore');
+const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
+const rootDir = import.meta.dirname;
 
 export default defineConfig(
   includeIgnoreFile(gitignorePath),
@@ -39,7 +37,7 @@ export default defineConfig(
       },
       parserOptions: {
         project: './tsconfig.test.json',
-        tsconfigRootDir: __dirname,
+        tsconfigRootDir: rootDir,
       },
     },
 

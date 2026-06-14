@@ -6,7 +6,8 @@
     "moduleResolution": "bundler",
     "noEmit": true,
     "allowJs": true,
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "rootDir": "."
   },
   "include": [
     "eslint.config.mts",
