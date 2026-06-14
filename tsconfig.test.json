@@ -10,7 +10,7 @@
   "include": [
     "eslint.config.mts",
     "jest.config.ts",
-    "rollup.config.mjs",
+    "tsdown.config.ts",
     "src",
     "__tests__"
   ],
