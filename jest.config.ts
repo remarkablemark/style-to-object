@@ -12,7 +12,9 @@ const config: Config = {
   },
   moduleFileExtensions: ['js', 'ts'],
   modulePathIgnorePatterns: ['fixtures', 'types'],
-  preset: 'ts-jest',
+  transform: {
+    '^.+\\.ts$': ['ts-jest', { tsconfig: './tsconfig.test.json' }],
+  },
   reporters:
     process.env.CI === 'true'
       ? [['github-actions', { silent: false }], 'summary']

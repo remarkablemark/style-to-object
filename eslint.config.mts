@@ -38,7 +38,7 @@ export default defineConfig(
         ...globals.jest,
       },
       parserOptions: {
-        project: './tsconfig.eslint.json',
+        project: './tsconfig.test.json',
         tsconfigRootDir: __dirname,
       },
     },
