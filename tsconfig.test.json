@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.test.tsbuildinfo",
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmit": true,
@@ -10,7 +11,7 @@
   "include": [
     "eslint.config.mts",
     "jest.config.ts",
-    "rollup.config.mjs",
+    "tsdown.config.ts",
     "src",
     "__tests__"
   ],
