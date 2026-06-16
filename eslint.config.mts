@@ -51,4 +51,10 @@ export default defineConfig(
       'simple-import-sort/imports': 'error',
     },
   },
+  {
+    files: ['**/*.{cjs,js,mjs}'],
+    rules: {
+      '@typescript-eslint/no-unsafe-call': 'off',
+    },
+  },
 );
