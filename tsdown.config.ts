@@ -7,7 +7,9 @@ const external = ['inline-style-parser'];
 const baseConfig = {
   entry,
   sourcemap,
-  external,
+  deps: {
+    neverBundle: external,
+  },
 } satisfies UserConfig;
 
 const umdBase = {
@@ -15,7 +17,9 @@ const umdBase = {
   format: 'umd' as const,
   outDir: 'dist',
   globalName: 'StyleToObject',
-  noExternal: external,
+  deps: {
+    alwaysBundle: external,
+  },
 };
 
 export default defineConfig([
