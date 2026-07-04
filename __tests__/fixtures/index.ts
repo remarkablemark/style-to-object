@@ -72,6 +72,16 @@ export const cases = [
     },
   ],
 
+  // https://github.com/remarkablemark/style-to-object/issues/112
+  [
+    'background: url("a)b;c") no-repeat;',
+    { background: 'url("a)b;c") no-repeat' },
+  ],
+  [
+    "background: url('a)b;c') no-repeat;",
+    { background: "url('a)b;c') no-repeat" },
+  ],
+
   // property prefix
   [
     '-webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;',
