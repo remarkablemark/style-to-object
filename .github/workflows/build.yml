@@ -42,3 +42,10 @@ jobs:
 
       - name: Lint package
         run: npm run lint:package
+
+      - name: Test UMD page
+        uses: remarkablemark/page-test-action@v1
+        with:
+          url: http://localhost:8000/examples
+          start: python3 -m http.server
+          wait-on: http://localhost:8000
