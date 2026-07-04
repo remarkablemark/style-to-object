@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/remarkablemark/style-to-object/compare/v2.0.0...v2.0.1) (2026-07-04)
+
+
+### Bug Fixes
+
+* **build:** bundle inline-style-parser in UMD output ([8ad60ad](https://github.com/remarkablemark/style-to-object/commit/8ad60ad30513feb8c56c3b0e2260a30ba3951685))
+* parse semicolon and parenthesis inside quoted url ([#1012](https://github.com/remarkablemark/style-to-object/issues/1012)) ([7525846](https://github.com/remarkablemark/style-to-object/commit/7525846bc24561cc4c2a76e4adaadee06c502d56))
+
 ## [2.0.0](https://github.com/remarkablemark/style-to-object/compare/v1.0.14...v2.0.0) (2026-06-14)
 
 
