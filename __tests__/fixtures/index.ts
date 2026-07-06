@@ -71,6 +71,12 @@ export const cases = [
       background: '#123456 url("https://foo.bar/image.png?v=2")',
     },
   ],
+  [
+    'background: url(data:image/png; base64,abc+/=)',
+    {
+      background: 'url(data:image/png; base64,abc+/=)',
+    },
+  ],
 
   // https://github.com/remarkablemark/style-to-object/issues/112
   [
