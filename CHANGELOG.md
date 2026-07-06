@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/remarkablemark/style-to-object/compare/v2.0.1...v2.0.2) (2026-07-06)
+
+
+### Build System
+
+* **deps:** bump inline-style-parser from 0.2.8 to 0.2.9 ([#1015](https://github.com/remarkablemark/style-to-object/issues/1015)) ([534d15c](https://github.com/remarkablemark/style-to-object/commit/534d15c8413610aa3aace9fd620ed896566b80e3))
+
 ## [2.0.1](https://github.com/remarkablemark/style-to-object/compare/v2.0.0...v2.0.1) (2026-07-04)
 
 
