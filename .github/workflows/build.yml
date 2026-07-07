@@ -44,7 +44,7 @@ jobs:
         run: npm run lint:package
 
       - name: Test UMD page
-        uses: remarkablemark/page-test-action@v1
+        uses: remarkablemark/page-test-action@501177ce8d124eff6bc5e7b930a3dbd62f28a173 # v1.0.6
         with:
           url: http://localhost:8000/examples
           start: python3 -m http.server
