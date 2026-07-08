@@ -67,7 +67,7 @@
     "publint": "0.3.21",
     "ts-jest": "29.4.11",
     "ts-node": "10.9.2",
-    "tsdown": "0.22.3",
+    "tsdown": "0.22.4",
     "typescript": "6.0.3",
     "typescript-eslint": "8.63.0"
   },
