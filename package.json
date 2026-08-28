@@ -55,7 +55,7 @@
     "@eslint/js": "10.0.1",
     "@types/jest": "30.0.0",
     "@types/node": "26.2.0",
-    "eslint": "10.9.0",
+    "eslint": "10.9.1",
     "eslint-plugin-prettier": "5.5.6",
     "eslint-plugin-simple-import-sort": "14.0.0",
     "globals": "17.11.0",
@@ -69,7 +69,7 @@
     "ts-node": "10.9.2",
     "tsdown": "0.22.14",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.67.0"
+    "typescript-eslint": "8.68.0"
   },
   "files": [
     "/cjs",
